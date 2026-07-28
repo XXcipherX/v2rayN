@@ -757,6 +757,8 @@ public class Global
         "10.0.0.1/30",
     ];
 
+    public const string DefaultXrayTunIPv6Address = "fc00::172:18:0:1/128";
+
     // Prefixes must leave room for a peer address (max /126); the sing-box system
     // stack derives a gateway from the first prefix and rejects single-address prefixes.
     public static readonly IReadOnlyList<string> TunIPv6Address =

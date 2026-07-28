@@ -69,7 +69,7 @@ public partial class CoreConfigV2rayService
                 tunInbound.settings.autoSystemRoutingTable = ["0.0.0.0/0"];
                 if (_config.TunModeItem.EnableIPv6Address == true)
                 {
-                    var address6 = _config.TunModeItem.IPv6Address.NullIfEmpty() ?? Global.TunIPv6Address.First();
+                    var address6 = _config.TunModeItem.IPv6Address.NullIfEmpty() ?? Global.DefaultXrayTunIPv6Address;
                     tunInbound.settings.gateway.Add(address6);
                     tunInbound.settings.autoSystemRoutingTable.Add("::/0");
                 }
